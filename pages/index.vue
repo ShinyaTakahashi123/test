@@ -11,7 +11,7 @@ export default {
   /*
   data() {
     return {
-      title: 'おしりの日常 サイドストーリ　修正',
+      title: 'おしりの日常 サイドストーリ　修正２',
       message: 'this is message.',
       now: 'wait....'
     }
