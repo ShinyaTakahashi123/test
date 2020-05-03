@@ -1,18 +1,26 @@
 <template>
   <section class="container">
-    <h1>{{ data }}</h1>
-
+    {{ data }}<br />
+    {{ title }}<br />
+    {{ now }}<br />
     <router-link to="/other">Go To Other</router-link>
   </section>
 </template>
 
 <script>
 export default {
-  /*
+  async asyncData({ $axios }) {
+    const response = await $axios.$get(
+      'https://5380qow063.execute-api.ap-northeast-1.amazonaws.com/demo'
+    )
+    return {
+      data: response
+    }
+  },
   data() {
     return {
-      title: 'おしりの日常 サイドストーリ　修正２',
-      message: 'this is message.',
+      title: 'おしりの日常' + '\u3000' + 'サイドストーリ' + '\u3000' + '修正２',
+      // message: 'this is message.',
       now: 'wait....'
     }
   },
@@ -21,15 +29,6 @@ export default {
       const d = new Date()
       this.now = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
     }, 1000)
-  },
-  */
-  async asyncData({ $axios }) {
-    const response = await $axios.$get(
-      'https://5380qow063.execute-api.ap-northeast-1.amazonaws.com/demo'
-    )
-    return {
-      data: response
-    }
   }
 }
 </script>
