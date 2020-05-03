@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      title: 'Hello222',
+      title: 'おしりの日常',
       message: 'this is message.',
       now: 'wait....'
     }
