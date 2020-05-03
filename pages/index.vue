@@ -1,9 +1,7 @@
 <template>
   <section class="container">
     <h1>{{ data }}</h1>
-    <p>{{ message }}</p>
-    <hr />
-    <pre>[{{ now }}]</pre>
+
     <router-link to="/other">Go To Other</router-link>
   </section>
 </template>
