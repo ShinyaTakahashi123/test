@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>{{ title }}</h1>
+    <h1>{{ data }}</h1>
     <p>{{ message }}</p>
     <hr />
     <pre>[{{ now }}]</pre>
@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  /*
   data() {
     return {
       title: 'おしりの日常',
@@ -22,6 +23,15 @@ export default {
       const d = new Date()
       this.now = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
     }, 1000)
+  },
+  */
+  async asyncData({ $axios }) {
+    const response = await $axios.$get(
+      'https://5380qow063.execute-api.ap-northeast-1.amazonaws.com/demo'
+    )
+    return {
+      data: response
+    }
   }
 }
 </script>
