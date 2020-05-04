@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    {{ data }}<br />
+    {{ data.body }}<br />
     {{ title }}<br />
     {{ now }}<br />
     <router-link to="/other">Go To Other</router-link>
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      title: 'おしりの日常' + '\u3000' + 'サイドストーリ' + '\u3000' + '修正２',
+      title: 'お　しりの日常　サイドストーリ　　修正２',
       // message: 'this is message.',
       now: 'wait....'
     }
